@@ -1,0 +1,45 @@
+""" Setup Vundle =========================
+set nocompatible   " required for Vundle  
+filetype off       " required for Vundle  
+
+" Set the runtime path to include Vundle and Initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage Vundle, Required
+Plugin 'gmarik/Vundle.vim'
+
+" JavaScript bundles
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
+
+" JSX Bundle
+Plugin 'mxw/vim-jsx'
+  let g:jsx_ext_required = 0 "enable JSX highlight in .js files
+
+call vundle#end()            " required for Vundle
+
+" Turn on Plugins, Indentation
+filetype plugin indent on    
+
+
+""" UI Tweaks ==========================
+set number    " line numbering
+set t_Co=256  " enable 256 colours
+
+" Colour scheme 
+syntax enable
+colorscheme distinguished 
+set enc=utf-8
+set term=screen-256color
+let $TERM='screen-256color'
+
+" Highlight current line 
+set cul
+
+" Whitespace stuff
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
